@@ -16,5 +16,12 @@ export class ListComponent {
     'Thor'
   ];
 
+  public deletedHero?: string;
+
+  removeLastHero():void {
+    if (this.heroNames.length > 0) {
+      this.deletedHero = this.heroNames.pop();
+    }
+  }
 
 }
