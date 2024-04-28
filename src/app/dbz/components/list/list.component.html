@@ -8,7 +8,10 @@
     let isEven = even;
     let isOdd= odd;
   "
-    class="list-group-item">
+    class="list-group-item" [ngClass]="{
+      'list-group-item-primary': isEven,
+      'list-group-item-dark': isLast,
+      }">
 
     <span class="text-primary">{{i + 1}}. </span>
 
@@ -17,10 +20,6 @@
     <strong>power: </strong>
 
     <span>{{ character.power }}</span>
-    <br>
-    <span>Es el primero {{ i === 0 }}</span>
-    <br>
-    <span>Es el último {{ i === characterList.length - 1 }}</span>
 
   </li>
 </ul>
