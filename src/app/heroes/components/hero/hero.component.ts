@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { v4 as uuid } from 'uuid';
 
 @Component({
   selector: 'app-heroes-hero',
@@ -6,6 +7,7 @@ import { Component } from '@angular/core';
   styleUrl: './hero.component.css'
 })
 export class HeroComponent {
+  public id: string = '';
   public name: string = 'iroman';
   public age: number = 45;
 
